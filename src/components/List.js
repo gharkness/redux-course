@@ -7,9 +7,10 @@ export default function List (props) {
         <li key={item.id}>
           <span
             onClick={() => props.toggle && props.toggle(item.id)}
-            style={{textDecoration: item.complete ? 'line-through' : 'none'}}>
+            
+            style={{textDecoration: item.complete ? 'line-through' : 'none', 'paddingRight': '5px'}}>
               {item.name}
-          </span>
+          </span> 
           <button onClick={() => props.remove(item)}>X</button>
         </li>
       ))}
